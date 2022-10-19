@@ -48,16 +48,16 @@ function timeFinished(){
     // togliere l'h1
     numbers.innerHTML = ""
     // chiedi al utente un numero per 5 volte
-    for(let i = 0; i < 5; i++){
+    for(let n = 0; n < 5; n++){
         let userResult = parseInt(prompt("dimmi un numero")) 
         result.push(userResult) 
         console.log(result)
     }
 
 //    risspote corrette utente
-    for(let i = 0; i < 5; i++){
-        if(result.includes(rdnNumbers)){
-            userNumberscorrect.push(result)
+    for(let u = 0; u < 5; u++){
+        if(rdnNumbers.includes (result[u])) {
+            userNumberscorrect.push (result[u])
         }
     }
     
