@@ -16,9 +16,11 @@ console.log(rdnNumbers)
 // stampare il risultato
 const numbers = document.querySelector("h1")
 
-let result = []
+
 numbers.innerHTML = rdnNumbers
 
+
+let result = []
 let userNumberscorrect =[]
 
 console.log(userNumberscorrect)
@@ -46,20 +48,16 @@ function timeFinished(){
     // togliere l'h1
     numbers.innerHTML = ""
     // chiedi al utente un numero per 5 volte
-    for(let n = 0; n < 5; n++){
-        
+    for(let i = 0; i < 5; i++){
         let userResult = parseInt(prompt("dimmi un numero")) 
         result.push(userResult) 
         console.log(result)
     }
 
-    // se rdnNumbers e incluso all intero di user result true
-    // altrimenti false
-   
-    for(let u = 0; u < 5; u++){
+//    risspote corrette utente
+    for(let i = 0; i < 5; i++){
         if(result.includes(rdnNumbers)){
-            userNumberscorrect.push(userResult)
-           
+            userNumberscorrect.push(result)
         }
     }
     
