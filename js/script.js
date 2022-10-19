@@ -27,7 +27,7 @@ console.log(userNumberscorrect)
 
 // stasmpo il messaggio del risultato
 const message = document.querySelector("p")
-message.innerHTML = userNumberscorrect
+
 
 
 
@@ -49,15 +49,19 @@ function timeFinished(){
     numbers.innerHTML = ""
     // chiedi al utente un numero per 5 volte
     for(let n = 0; n < 5; n++){
-        let userResult = parseInt(prompt("dimmi un numero")) 
+        let userResult = parseInt(prompt("dimmi un numero da 1 a 9")) 
         result.push(userResult) 
         console.log(result)
     }
 
 //    risspote corrette utente
     for(let u = 0; u < 5; u++){
-        if(rdnNumbers.includes (result[u])) {
+        // verifico se result u e tra i numer random
+        if(rdnNumbers.includes (result[u] )) {
+            // pusho questo numeroi dentro userNumberscorrect
             userNumberscorrect.push (result[u])
+            console.log(userNumberscorrect);
+            message.innerHTML = userNumberscorrect
         }
     }
     
