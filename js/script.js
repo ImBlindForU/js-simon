@@ -16,7 +16,17 @@ console.log(rdnNumbers)
 // stampare il risultato
 const numbers = document.querySelector("h1")
 
+let result = []
 numbers.innerHTML = rdnNumbers
+
+let userNumberscorrect =[]
+
+console.log(userNumberscorrect)
+
+// stasmpo il messaggio del risultato
+const message = document.querySelector("p")
+message.innerHTML = userNumberscorrect
+
 
 
 // FUNCTION
@@ -37,24 +47,22 @@ function timeFinished(){
     numbers.innerHTML = ""
     // chiedi al utente un numero per 5 volte
     for(let n = 0; n < 5; n++){
-        let userResult
-        userResult = parseInt(prompt("dimmi un numero")) 
-      
-
-       result = userResult
-       console.log(result)
+        
+        let userResult = parseInt(prompt("dimmi un numero")) 
+        result.push(userResult) 
+        console.log(result)
     }
 
     // se rdnNumbers e incluso all intero di user result true
     // altrimenti false
-    let boolean = ""
-    if (rdnNumbers.includes(result)){
-        boolean = true
-    } else {
-        boolean = false
+   
+    for(let u = 0; u < 5; u++){
+        if(result.includes(rdnNumbers)){
+            userNumberscorrect.push(userResult)
+           
+        }
     }
-
-    console.log(boolean)
+    
 }
 
 setTimeout(timeFinished, 3000);
