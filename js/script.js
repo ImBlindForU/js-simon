@@ -38,16 +38,17 @@ function timeFinished(){
     // chiedi al utente un numero per 5 volte
     for(let n = 0; n < 5; n++){
         let userResult
-        userResult = prompt("dimmi un numero")
-        console.log(userResult)
+        userResult = parseInt(prompt("dimmi un numero")) 
+      
 
-       
+       result = userResult
+       console.log(result)
     }
 
     // se rdnNumbers e incluso all intero di user result true
     // altrimenti false
     let boolean = ""
-    if (rdnNumbers.includes(userResult)){
+    if (rdnNumbers.includes(result)){
         boolean = true
     } else {
         boolean = false
